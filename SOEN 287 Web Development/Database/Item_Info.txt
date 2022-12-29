@@ -1,0 +1,14 @@
+almond_cookies 0.50
+cheese_cake 1.00
+chicken_biscuit 0.50
+egg_tart 1.00
+guava_bites 0.60
+coconut_mochi 1.00
+pineapple_bites 0.60
+pineapple_cake 1.00
+tan_wong_su 1.00
+tau_sa_pen 0.70
+pork_bun 0.80
+red_bean_paste_bun 0.80
+coconut_bun 0.80
+custard_bun 0.80

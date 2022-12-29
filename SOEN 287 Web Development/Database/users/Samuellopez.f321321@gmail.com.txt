@@ -1,0 +1,3 @@
+Template1 almond_cookies 0 cheese_cake 0 chicken_biscuit 0 egg_tart 0 guava_bites 0 coconut_mochi 0 pineapple_bites 0 pineapple_cake 0 tan_wong_su 0 tau_sa_pen 0 pork_bun 0 red_bean_paste_bun 0 coconut_bun 0 custard_bun 0
+Template2 almond_cookies 0 cheese_cake 0 chicken_biscuit 0 egg_tart 0 guava_bites 0 coconut_mochi 0 pineapple_bites 0 pineapple_cake 0 tan_wong_su 0 tau_sa_pen 0 pork_bun 0 red_bean_paste_bun 0 coconut_bun 0 custard_bun 0
+Template3 almond_cookies 0 cheese_cake 0 chicken_biscuit 0 egg_tart 0 guava_bites 0 coconut_mochi 0 pineapple_bites 0 pineapple_cake 0 tan_wong_su 0 tau_sa_pen 0 pork_bun 0 red_bean_paste_bun 0 coconut_bun 0 custard_bun 0
