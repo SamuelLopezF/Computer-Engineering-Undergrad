@@ -1,0 +1,307 @@
+/*
+	Last Edited By: Sobhan
+	Edit Date: 11-Nov-2020
+	Edit Number: 1
+	Edit Details:
+		CSS for Login form
+		
+*/
+
+/* Important colours:
+Red: 8d191c
+Beige: debc78
+White: ffeed4
+*/
+
+/* Sources:
+Brush
+https://www.onlygfx.com/27-grunge-brush-stroke-banner-png-transparent-vol-2/
+
+Email
+https://www.freepik.com/free-icon/black-email-envelope_703021.htm
+
+Telephone
+https://www.pngrepo.com/svg/262685/telephone-call
+
+Facebook
+https://www.flaticon.com/free-icon/facebook-circular-logo_20673
+
+Instagram
+https://www.stickpng.com/img/icons-logos-emojis/tech-companies/new-black-instagram-logo-2020
+
+*/
+
+/* general stuff */
+body {
+    background-color: #ffeed4;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+* {
+    font-family: "Avenir","Architects Daughter", "Permanent Marker", "Tekton", "Comic Sans MS", Verdana, Arial, sans-serif;
+}
+
+h1 {font-size: 48px;}
+h1 {font-size: 40px;}
+h3 {font-size: 32px;}
+h4 {font-size: 24px;}
+
+button {
+
+    padding: 5px 20px;
+    background-color: #8d191c;
+    color: #ffeed4;
+    border-radius: 5px;
+    border: none;
+
+}
+
+/* Navigation Bar */
+/*
+nav {
+    background-color: #8d191c;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    }
+*/
+
+
+header {
+    background-color: #8d191c;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+
+nav table {
+    margin: auto;
+    text-align: center;  
+    padding: 0.5em;
+}
+
+nav table th {
+    text-align: center;
+    vertical-align: center;
+}
+
+nav table tr th {
+    color: #debc78;
+    text-decoration: none;
+    font-size: 32px;
+    text-align: left;
+}
+
+nav .bouton{
+    background-color: #debc78;
+    align-self: center;
+}
+
+table tr td textarea #sr{
+    color:lightgrey;
+}
+
+nav table tr th .logo {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+nav table tr th a {
+    color: #debc78;
+    text-decoration: none;
+    font-size: 32px;
+    padding: 0.3em 0.75em;
+    
+}
+nav table tr th a:hover {
+    background-color: #701417;
+}
+
+nav table tr th .logo {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+nav table tr .cart img {
+    vertical-align: text-top;
+    margin-right: 10px;
+}
+
+fieldset {
+    border: none;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #8d191c;
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 75%;*/
+    color: #debc78;
+}
+
+footer * {
+    color: #debc78;
+}
+
+
+/* about us table */
+
+table.about_table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.alt_row {
+    background-color: #ffe1b5;
+}
+
+
+
+/* contact us */
+
+#contact_us {width: 40%;}
+#contact_us td {width:310px;}
+
+.message {
+    background-color: #ffe1b5;
+    padding: 10px;  
+}
+
+.message table tr td {
+    text-align: left;
+}
+
+#email {width: 300px;}
+
+#sr {width: 300px;
+    height: 100px;}
+
+#subject {width: 300px;}
+
+#contact_info {width: 300px;}
+#contact_info * {text-align: center;}
+
+#mapid { 
+	height: 300px; 
+	width: 500px;
+	}
+
+/*
+table.contact_table th {width: 50%;}
+table.contact_table td {width: 50%;}
+*/
+
+
+/* Special Stuff */
+.brush {
+    border: 20px solid;
+    border-image: url(brush.png) 5% stretch;
+}
+
+.small_brush {
+    border: 10px solid;
+    border-image: url(brush.png) 5% stretch;
+}
+
+.special {
+    background-color: #debc78;
+    width: 75%;
+    margin: auto;
+}
+
+
+
+/* tables */
+table {
+    margin: auto;
+}
+
+/* buttons */
+input, textarea {
+    background-color: #debc78;
+    width: 260px
+}
+
+/* menu */
+
+.menu table {
+    margin: auto;
+    width: 75%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.menu_button input {
+    background-color: #ffeed4;
+    color: black;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+.menu_button label {
+    font-weight: bold;
+}
+
+
+.menuItem {
+    background-color: #debc78;
+    vertical-align: top;
+}
+
+
+
+#submit * {
+    text-align: center;
+}
+
+/* Login */
+
+#login {width: 30%;
+    margin: auto;
+    background-color: #ffe1b5;}
+
+#login input {
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+#login button {
+    width: 200px;
+}
+
+#login th {
+    text-align: left;
+    font-weight: normal;
+}
+
+#login span {
+    text-decoration: underline;
+    color: blue;
+}
+
+/*addded Dec 3 by Nina*/
+.box{
+    background-color: #debc78;
+}
+table tr td input.box1{
+    background-color: #debc78;
+    width: 25px;
+}
+
+
+table.aligning{
+    text-align: right;
+    color:white;
+    font:sans-serif;
+}

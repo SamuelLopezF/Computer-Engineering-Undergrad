@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> Dulceria China </title>
+        <meta charset = "utf-8"/> 
+		<link href="Styles/template.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" 
+        crossorigin=""/>
+        <link rel="stylesheet" href="leaflet-routing-machine.css">
+        <script src="JavaScript/index.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" 
+        crossorigin=""></script>
+        
+        <style type = "text/CSS">
+            #contact_info * {line-height: 6px;}
+        </style>
+        
+        
+    </head>
+
+    <body>
+		<header>
+            <nav>
+                <table>
+                    <tr>
+                        <th> <img width="100" src="Styles/BakeryLogo.png" alt="Dulceria China logo" class = "logo"/> </th>
+                        <th><a href = "index.html"> Home </a></th>
+                        <th><a href = "menu.html"> Menu </a></th>
+                        <th><a href = "about_us.html"> About Us </a></th>
+                        <th><a href = "contact_us.html"> Contact Us </a></th>
+                        <th><a href = "account.html"> Account </a></th>
+                        
+                        <th class="cart" id='cartIconTopRight'><a href="Cart.html"><span class="qty" id= 'cartIconTopRightQuantity'>0</span><img src="Styles/Cart.png" alt="Cart.html" width="40px" height="40px"/></a></th>
+                        
+                    </tr>
+                </table>
+            </nav>
+        </header>
+
+
+		
+        <table id = "contact_us">
+           
+            <td id = "my_map">
+                <div id="mapid"></div>
+        <form class = "message small_brush" action = "">
+                
+                <table>
+                    <tr>
+                        <th colspan = "2">
+                            <input type = "text" id = "address" width="50px" placeholder = "00 Sample Road #0000, City, Town, 123456"/>
+                        </th>
+                        <th>
+                            <button type = "button" onclick = "addr_search()" id = "submit"> Submit </button>
+                        </th>
+                    
+                    
+                        <th>
+                            <button id = "submit"> Clear </button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan = "2">
+                            <p id = "distance" value = ""> </p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <!-- Stats table -->                
+            <div id="output" class="result-table"></div>
+       </form>
+                
+            <div class="container-map" id="google-map"></div>   
+    </div>          
+        </td>
+        </table>
+                    
+
+
+    
+		
+		<footer>
+            <table>
+                <tr id = "email">
+                    <td>
+                        <img src = "Styles/email.png" alt = "Email" width = "25px" height = "25px"/>
+                    </td>
+                    <td>
+                        <a href = "mailto:dulceriachina.ec@gmail.com">dulceriachina.ec@gmail.com</a>
+                    </td>
+    
+                </tr>
+                <tr id = "telephone">
+                    <td>
+                        <img src = "Styles/phone.png" alt = "Phone" width = "25px" height = "25px"/>
+                    </td>
+                    <td>
+                        (04) 251-0363 - (593) 997-045-024
+                    </td>
+    
+                </tr>
+                <tr id = "facebook">
+                    <td>
+                        <img src = "Styles/facebook.png" alt = "Facebook" width = "25px" height = "25px"/>
+                    </td>
+                    <td>
+                        <a href = "https://www.facebook.com/dulceriachina/" target = "_blank"> facebook.com/dulceriachina</a>
+                    </td>
+    
+                </tr>
+                <tr id = "instagram">
+                    <td>
+                        <img src = "Styles/instagram.png" alt = "Instagram" width = "25px" height = "25px"/>
+                    </td>
+                    <td>
+                       <a href="https://www.instagram.com/dulceriachina/">@dulceriachina</a> 
+                    </td>
+    
+                </tr>
+            </table>
+            <p> ©2020 Dulceria China </p>
+        </footer>
+        
+        <script type="text/javascript">
+            var DulceriaLat = -2.195611;
+var DulceriaLong = -79.884254;
+            
+            //mapid is the id for your div element
+            //You can leave the rest as it is
+            mymap = L.map('mapid').setView([DulceriaLat, DulceriaLong], 14.5);            
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(mymap);
+        var dulceriaCircle1 = L.circle([DulceriaLat, DulceriaLong], { color: "LightGreen", radius: 1000}).addTo(mymap);
+        var marker = L.marker([-2.195611, -79.884254]).bindPopup("Dulcuria China").openPopup().addTo(mymap);
+
+
+        //CODE TO CHANGE ADDRESS TO LATLONG
+        //https://www.w3schools.com/js/js_ajax_http_response.asp
+        //https://wiki.openstreetmap.org/wiki/FR:Nominatim
+        //There is also the reverse search from lat long to address
+        function addr_search()
+        {
+            var addr = document.getElementById("address").value;
+            var xmlhttp = new XMLHttpRequest();
+            var url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + addr;
+            
+            xmlhttp.onreadystatechange = function()
+            {
+                //alert("ReadyState: " + this.readyState);
+                //alert("Status: " + this.status);
+                if (this.readyState == 4 && this.status == 200)
+                {
+                    var myArr = JSON.parse(this.responseText);  
+                    //alert(myArr);                 
+                    //myArr is an array of the matching addresses 
+                    //You can extract the lat long attributes
+                    //myArr[0].lat and myArr[0].lon;
+                    var userLat = myArr[0].lat;
+                    var userLong = myArr[0].lon;
+                    
+                    var userCircle = L.circle([userLat, userLong], { color: "blue", radius: 50}).addTo(mymap);
+
+                    //Use Polyline to draw line on map
+                    //https://leafletjs.com/reference-1.7.1.html
+                    var myLine = L.polyline([[userLat,userLong],[DulceriaLat, DulceriaLong]], {color: "blue"}).addTo(mymap);
+
+                    //Compute Distance using
+                    //(from.distanceTo(to)).toFixed(0)/1000;
+                    var coords = L.latLng(DulceriaLat, DulceriaLong);
+                    var distance = coords.distanceTo([userLat,userLong]).toFixed(0)/1000;
+                    document.getElementById("distance").innerHTML = "Your distance Dulcuria China is " + distance + " km";
+                    //Sample distance: calle 14 se guayaquil
+                }
+            if (distance > 5) {
+                        document.getElementById("distance").innerHTML = "Your address is out of delivery range." + "<br>Please enter address within 5km";
+                        //Sample distance: calle 49 so guayaquil
+                    }       
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+            }
+        </script>   
+	</body>
+</html>
+<!--var dulceriaLat = -2.195611;
+			var dulceriaLong = -79.884254;-->
