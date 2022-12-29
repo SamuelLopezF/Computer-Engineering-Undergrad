@@ -1,0 +1,291 @@
+/*
+	Last Edited By: Sobhan
+	Edit Date: 23-Nov-2020
+	Edit Number: 2
+	Edit Details:
+        Updated/Improved CSS
+        Footer positioning improved
+        Nav bar no longer has the weird gap
+        Mousing over buttons now done by CSS
+        Colours moved to variables to make changes easy
+        Nav bar is now responsive to size (needs more work overall, but I'll leave that for the very end of the project)
+		
+*/
+
+/* Sources:
+Brush
+https://www.onlygfx.com/27-grunge-brush-stroke-banner-png-transparent-vol-2/
+
+Email
+https://www.freepik.com/free-icon/black-email-envelope_703021.htm
+
+Telephone
+https://www.pngrepo.com/svg/262685/telephone-call
+
+Facebook
+https://www.flaticon.com/free-icon/facebook-circular-logo_20673
+
+Instagram
+https://www.stickpng.com/img/icons-logos-emojis/tech-companies/new-black-instagram-logo-2020
+
+*/
+
+:root{
+    --red: #8d191c;
+    --beige: #debc78;
+    --white: #ffeed4;
+    --light_red: #a72429;
+    --dark_red: #701417;
+    --light_beige: #ffe1b5;
+}
+
+/*=========== general stuff ===========*/
+
+body {
+    background-color: var(--white);
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    font-size: 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+* {font-family: "Avenir","Architects Daughter", "Permanent Marker", "Tekton", "Comic Sans MS", Verdana, Arial, sans-serif;}
+
+h1 {font-size: 48px;}
+h2 {font-size: 40px;}
+h3 {font-size: 32px;}
+h4 {font-size: 24px;}
+
+h1, h2, h3, h4 {
+    padding-top: 0.5em;
+    padding-bottom: 0em;}
+
+
+/*=========== Buttons ===========*/
+button {
+    padding: 5px 20px;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {background-color: var(--light_red);}
+
+/*=========== Navigation Bar ===========*/
+header {
+    background-color: var(--red);
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+nav table {
+    margin: auto;
+    text-align: center;  
+}
+
+nav table th {
+    text-align: center;
+    vertical-align: center;
+}
+
+nav table tr th a {
+    color: var(--beige);
+    text-decoration: none;
+    font-size: 2vw;
+    padding: 0.075em 0.75em;
+}
+
+nav table tr th a:hover {background-color: var(--dark_red);}
+
+nav table tr th .logo {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+nav table tr .cart img {
+    vertical-align: text-top;
+    margin-right: 10px;
+}
+
+#cartIconTopRight img {
+    width: 2.5vw !important;
+    height: 2.5vw !important;
+}
+
+img.logo {
+    width: 5vw !important;
+    height: 5vw !important;
+}
+
+.current_page {background-color: var(--dark_red);}
+
+/* Footer */
+footer {
+    background-color: var(--red);
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--beige);
+}
+
+footer * {
+    color: var(--beige);
+}
+
+/*========== Keeping Footer at Bottom ==========*/
+
+/* From Stack Overflow: https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b/25218797#25218797 */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+footer {
+    display: table-row;
+    height: 0;
+}
+
+
+/*=========== about us table ===========*/
+
+table.about_table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.alt_row {
+    background-color: var(--light_beige);
+}
+
+
+
+/*=========== contact us ===========*/
+
+#contact_us {width: 40%;}
+#contact_us td {width:310px;}
+
+.message {
+    background-color: var(--light_beige);
+    padding: 10px;  
+}
+
+.message table tr td {
+    text-align: left;
+}
+
+#email {width: 300px;}
+
+#sr {width: 300px;
+    height: 100px;}
+
+#subject {width: 300px;}
+
+#contact_info {width: 300px;}
+#contact_info * {text-align: center;}
+
+#mapid { 
+	height: 300px; 
+	width: 300px;
+	}
+
+/*=========== Special Stuff ===========*/
+.brush {
+    border: 20px solid;
+    border-image: url(brush.png) 5% stretch;
+}
+
+.small_brush {
+    border: 10px solid;
+    border-image: url(brush.png) 5% stretch;
+}
+
+.special {
+    background-color: var(--beige);
+    width: 75%;
+    margin: auto;
+}
+
+.banner {
+    width: 66%;
+    background-color: var(--beige);
+    margin: auto;
+}
+
+.not_banner {
+    width: 66%;
+    margin: auto;
+}
+
+
+
+/*=========== tables ===========*/
+table {margin: auto;}
+
+/*=========== buttons ===========*/
+input, textarea {
+    background-color: var(--beige);
+    resize: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/*=========== menu ===========*/
+
+.menu table {
+    margin: auto;
+    width: 75%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.menu_button input {
+    background-color: var(--white);
+    color: black;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+.menu_button label {font-weight: bold;}
+
+.menuItem {
+    background-color: var(--beige);
+    vertical-align: top;
+}
+
+#submit * {
+    text-align: center;
+}
+
+/*=========== Login ===========*/
+
+#login {width: 30%;
+    margin: auto;
+    background-color: var(--light_beige);}
+
+#login input {
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+#login button {
+    width: 200px;
+}
+
+#login th {
+    text-align: left;
+    font-weight: normal;
+}
+
+#login span {
+    text-decoration: underline;
+    color: blue;
+}

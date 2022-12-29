@@ -1,0 +1,43 @@
+/* This contains the whole body */
+.cart_container{
+    /* color: black !important; */
+    width: 100%; 
+    /* border: solid rgb(0, 122, 82); */
+    /* padding: 20px; */
+}
+
+/* Contains the whole table */
+table.pre_checkout_table {
+    /* border: solid rgb(37, 0, 204); */
+    padding: 25px;
+    margin: auto auto;
+}
+/* Table Row 1 */
+table.pre_checkout_table th{
+    border: dashed red;
+    width: auto;
+    text-align: center;
+    /* padding: 0px 150px 30px 150px; */
+}
+
+/* Table row 2 */
+table.pre_checkout_table td{
+    border: dashed blue;
+    text-align: center;
+
+}
+
+table.pre_checkout_table input[type=number] {
+    -moz-appearance:textfield; /* THIS REMOVES THE ARROWS FROM THE QTY BOX  */
+    width: 35px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+/* "TOTAL" ROW */
+tr.total td{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25pt;
+    padding: 20px;
+}

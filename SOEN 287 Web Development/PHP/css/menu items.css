@@ -1,0 +1,77 @@
+/*
+	Last Edited By: Sobhan
+	Edit Date: 07-Nov-2020
+	Edit Number: 0
+	Edit Details:
+		To help keep track of the different versions, I'm adding this to the top of every
+		file. Please update this info whenever you want to change anything. This makes it easier to
+		keep track of changes/the latest version.
+		Thank you!
+		
+*/
+
+
+div{
+    padding: 10px .5px;
+    color: #8d191c;
+    float: left;
+    /* margin-left: .5%; */
+    /* margin-right: 50%; */
+    width: 25%;
+    clear: right;
+    /* border: solid; */
+}
+
+footer{
+    clear: both;
+}
+
+.menuItem{
+    margin: 0 3.5%;
+    position: static;
+    /* border: solid; */
+}
+
+.menu, .menu_mooncake{
+    width: 100%;
+}
+
+.number_input{
+    width: 10%;
+    border-radius: 15px;
+}
+
+.add_btn{
+    border: solid;
+    border-radius: 15px;
+    background-color: #debc78;
+    color: black;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+    /* position: relative; */
+    /* top: -5px; left: -20px; */
+}
+
+.price{
+    /* border: solid; */
+    color: black;
+    font-size: 20pt;
+    margin-right: 10%;
+}
+
+h1{
+    position: relative;
+    top: 35px; left: 0px;
+}
+
+h3{
+    position: relative;
+    top: 35px; left: 0px;
+}
+
+dd{
+    /* border: solid; */
+    margin-left: 10%;
+    margin-right: 10%;
+}
